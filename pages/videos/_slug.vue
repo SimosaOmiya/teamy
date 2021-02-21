@@ -44,7 +44,7 @@
 
 <script>
 export default({
-  async asyncData({params,$axios}){
+  async asyncData({params,$config,$axios}){
     // console.log(`${params.slug}`)
     const url = `https://teamy-unofficial.microcms.io/api/v1/videos/${params.slug}`;
     const video = await $axios.$get(url,{

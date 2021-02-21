@@ -75,9 +75,7 @@ export default {
 
   target: 'static',
   
-  router: {
-    base: '/teamy/'
-  },
+
   
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
@@ -128,4 +126,10 @@ export default {
      });
     }
    },
+  
+   router: {
+    base: '/teamy/'
+  },
+
+   
 }

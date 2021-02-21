@@ -19,7 +19,7 @@
 <script>
   import ContentCard from "@/components/contentCard.vue"
   export default({
-    async asyncData({$axios}){
+    async asyncData({$config, $axios}){
       const url = "https://teamy-unofficial.microcms.io/api/v1/videos";
       let total = 0;
       const limit = 50;
