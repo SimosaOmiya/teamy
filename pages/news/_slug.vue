@@ -23,7 +23,7 @@ export default({
   async asyncData({params,$axios}){
     const url = `https://teamy-unofficial.microcms.io/api/v1/news/${params.slug}`;
     const news = await $axios.$get(url,{
-      headers:{"X-API-KEY":process.env.API_KEY}
+      headers:{"X-API-KEY":$config.apiKey}
     })
     return {news}
   },

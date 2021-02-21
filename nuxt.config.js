@@ -29,7 +29,7 @@ export default {
       { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.15.2/css/all.css", integrity:"sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu",crossorigin:"anonymous" },
     ],
     script:[
-      { src: "https://platform.twitter.com/widgets.js", async: true, charset="utf-8", }
+      { src: "https://platform.twitter.com/widgets.js", async: true, charset: "utf-8", }
     ],
   },
 
@@ -65,6 +65,13 @@ export default {
   axios: {},
 
   env: { API_KEY },
+
+  privateRuntimeConfig: {
+    apiKey: API_KEY
+  },
+  publicRuntimeConfig: {
+    apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
+  },
 
   target: 'static',
   

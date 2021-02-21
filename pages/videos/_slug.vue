@@ -48,7 +48,7 @@ export default({
     // console.log(`${params.slug}`)
     const url = `https://teamy-unofficial.microcms.io/api/v1/videos/${params.slug}`;
     const video = await $axios.$get(url,{
-      headers:{"X-API-KEY":process.env.API_KEY}
+      headers:{"X-API-KEY":$config.apiKey}
     })
     // console.log(video);
     return {video}
