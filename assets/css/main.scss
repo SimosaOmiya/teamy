@@ -1,0 +1,163 @@
+// bootstrap overrides and customized grobal designs
+
+@font-face {
+  font-family: "GenShinGothic";
+  src: url(~assets/fonts/GenShinGothic-P-Normal.ttf) format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: "GenShinGothic";
+  src: url(~assets/fonts/GenShinGothic-P-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "GenShinGothic";
+  src: url(~assets/fonts/GenShinGothic-P-medium.ttf) format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: "GenShinGothic";
+  src: url(~assets/fonts/GenShinGothic-P-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: "GenShinGothic";
+  src: url(~assets/fonts/GenShinGothic-P-Heavy.ttf) format('truetype');
+  font-weight: 900;
+}
+
+$twitter-color: rgba(#1DA1F2, .95);
+$instagram-color: rgba(#262626, .95);
+$line-color: rgba( #00c300, .95);
+$hibiki-orange-color: rgba(#e83a0c, .95);
+$secondary: #adb5bd; 
+$link-color: black;
+$mikoi: rgba(#ffcc33, 1);
+$ayasa: rgba(#ff0033, 1);
+$aimi: rgba(#0077ff, 1);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "secondary":  $secondary,
+    "twitter":    $twitter-color,
+    "instagram":  $instagram-color,
+    "line": $line-color,
+    "hibiki": $hibiki-orange-color,
+    "mikoi": $mikoi,
+    "ayasa": $ayasa,
+    "aimi": $aimi,
+  ),
+  $theme-colors
+);
+
+$font-family-sans-serif:(
+  'Source Sans Pro',
+  'GenShinGothic',
+  Meiryo,
+  sans-serif
+);
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 1.8;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.3;
+$h4-font-size: $font-size-base * 1.3;
+
+$headings-font-weight: 700;
+$link-hover-color: remove;
+$b-sidebar-transition-duration: 1s;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-vue/src/index.scss";
+
+// reboot
+
+body{
+  scroll-behavior: smooth;
+  background: white;
+} 
+
+section{
+  margin: 2rem 0;
+}
+
+p, li, a, span, .btn{
+  transform: rotate(0.07deg) !important;
+  letter-spacing: .05rem ;
+  color: $gray-800;
+  margin: 0;
+}
+p{
+  margin-bottom: .5em;
+}
+ul{
+  padding-left: 0;
+
+  ul{
+    margin-top: .25rem;
+    
+    li{
+      list-style-type: "-";
+      padding-left: .25rem;
+    }
+  }
+}
+
+li{
+  list-style: none;
+  padding-left: 1rem;
+}
+
+h1{
+  color: $gray-800;
+  font-family: 'DM Serif Display', serif !important;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: .1rem ;
+  text-align: center;
+
+  &::before, &::after{
+    display: inline-block;
+    content:"";
+    background-image: url(~assets/img/heading-icon.png);
+    background-size: contain;
+    vertical-align :middle;
+    
+    margin: 0 .4rem;
+    width: $h3-font-size*2.5;
+    height: $h3-font-size;
+  }
+}
+
+h2{
+  color: $gray-800;
+  padding-bottom: .25em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border-bottom: 1px solid $gray-500;
+}
+
+h3{
+  color: $gray-800;
+  margin-bottom: 1em;
+  // text-align: center;
+}
+
+*:focus {
+  outline: none;
+}
+
+.hqdefault{
+  padding: -15px auto;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.2rem;
+  }
+
+  ul ul{
+    padding-left: 1rem;
+  }
+}
