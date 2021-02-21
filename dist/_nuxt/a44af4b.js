@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{323:function(t,n,e){"use strict";e.r(n);var l=e(31),component=Object(l.a)({},(function(){var t=this.$createElement,n=this._self._c||t;return n("b-container",{attrs:{fluid:"lg"}},[n("section",[n("h2",[this._v("Goods")]),this._v(" "),n("p",[this._v("準備中")])])])}),[],!1,null,null,null);n.default=component.exports}}]);
