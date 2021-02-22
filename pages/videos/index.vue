@@ -28,7 +28,7 @@
       while(1){
         const response = await $axios.$get(url,{
           params:{"limit": limit , "offset": total},
-          headers:{"X-API-KEY":process.env.apiKey}
+          headers:{"X-API-KEY":process.env.API_KEY}
         })
 
         const res = response.contents;

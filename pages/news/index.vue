@@ -22,7 +22,7 @@ export default({
   async asyncData({$axios}){
     const url = "https://teamy-unofficial.microcms.io/api/v1/news";
     const res = await $axios.$get(url,{
-      headers:{"X-API-KEY":process.env.apiKey}
+      headers:{"X-API-KEY":process.env.API_KEY}
     })
     const newsGroups = res.contents
     // console.log(videos);
