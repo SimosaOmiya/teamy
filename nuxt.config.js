@@ -20,7 +20,7 @@ export default {
       { property:"og:description" , content:'佐々木未来、伊藤彩沙、愛美からなる声優Youtuberグループ、声優三姉妹【チームY】の非公式ウェブサイト' },
       { property:"og:type" , content: "website"},
       { property:"og:url" , content: "https://team-y.herokuapp.com/"},
-      { property:"og:image" , content:'/assets/img/bgPc.png' },
+      { property:"og:image" , content:'https://team-y.herokuapp.com/_nuxt/img/bgPc.0715b03.png' },
       { property:"og:site_name" , content:"声優三姉妹【チームY】非公式ウェブサイト" },
       { property:"og:locale" , content:"ja_JP" },
       { name: "twitter:card", content: "summary_large_image"},
