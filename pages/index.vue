@@ -103,9 +103,7 @@
       MenuBtn
     },
     mounted() {
-      if (twttr) {
-        twttr.widgets.load()
-      }
+      window.twttr.widgets.load()
     }
   })
 </script>

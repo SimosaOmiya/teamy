@@ -233,6 +233,9 @@
     components:{
       NameCard,
       MenuBtn
+    },
+    mounted() {
+      window.twttr.widgets.load()
     }
   })
 </script>

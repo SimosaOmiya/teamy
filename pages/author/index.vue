@@ -56,6 +56,14 @@
   </b-container>
 </template>
 
+<script>
+export default {
+  mounted() {
+    window.twttr.widgets.load()
+  }  
+}
+</script>
+
 <style scoped lang="scss">
 .btn{
   color:white;
