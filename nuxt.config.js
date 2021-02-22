@@ -64,7 +64,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
-  env: { API_KEY },
+  // env: { API_KEY },
 
   privateRuntimeConfig: {
     apiKey: API_KEY
