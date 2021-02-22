@@ -78,6 +78,11 @@ export default({
         return this.video.myComment
       }
     }
+  },
+  mounted() {
+    if (twttr) {
+      twttr.widgets.load()
+    }
   } 
 })
 </script>

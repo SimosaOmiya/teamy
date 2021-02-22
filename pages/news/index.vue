@@ -30,6 +30,11 @@ export default({
   },
   components:{
     ContentCard
+  },
+  mounted() {
+    if (twttr) {
+      twttr.widgets.load()
+    }
   }
 })
 </script>

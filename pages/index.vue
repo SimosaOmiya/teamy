@@ -101,6 +101,11 @@
     components:{
       ContentCard,
       MenuBtn
+    },
+    mounted() {
+      if (twttr) {
+        twttr.widgets.load()
+      }
     }
   })
 </script>

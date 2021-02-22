@@ -36,6 +36,11 @@ export default({
         return this.news.thumbnailSrc
       }
     }
+  },
+  mounted() {
+    if (twttr) {
+      twttr.widgets.load()
+    }
   }
 })
 </script>
