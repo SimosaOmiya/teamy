@@ -5,6 +5,10 @@ const axios = require("axios");
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    htmlAttrs: {
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
+    },
     title: '声優三姉妹【チームY】 非公式ウェブサイト',
     meta: [
       { charset: 'utf-8' },
@@ -15,15 +19,15 @@ export default {
       { propaty:"og:title" , content:"声優三姉妹【チームY】非公式ウェブサイト"},
       { propaty:"og:description" , content:'佐々木未来、伊藤彩沙、愛美からなる声優Youtuberグループ、声優三姉妹【チームY】の非公式ウェブサイト' },
       { propaty:"og:type" , content: "website"},
-      { propaty:"og:url" , content: ""},
-      { propaty:"og:image" , content:'http://simosaomiya.github.io/teamy/assets/img/bgPc_nologo.png' },
+      { propaty:"og:url" , content: "https://team-y.herokuapp.com/"},
+      { propaty:"og:image" , content:'/assets/img/bgPc.png' },
       { propaty:"og:site_name" , content:"声優三姉妹【チームY】非公式ウェブサイト" },
       { propaty:"og:locale" , content:"ja_JP" },
       { name: "twitter:card", content: "summary_large_image"},
       { name: "twitter:creator", content: "@simosaomiya"}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/teamy/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Sawarabi+Gothic&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Serif+Display:ital@1&display=swap" },
       { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.15.2/css/all.css", integrity:"sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu",crossorigin:"anonymous" },
@@ -64,7 +68,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
-  // env: { API_KEY },
+  env: { API_KEY },
 
   privateRuntimeConfig: {
     apiKey: API_KEY
