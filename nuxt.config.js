@@ -73,7 +73,7 @@ export default {
     apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
   },
 
-  target: 'static',
+  // target: 'static',
   
 
   
