@@ -101,35 +101,35 @@ export default {
     }
   },
 
-  generate: {
-    routes() {
-     const videos = axios
-      .get("https://teamy-unofficial.microcms.io/api/v1/videos", {
-       headers: { "X-API-KEY": process.env.API_KEY }
-      })
-      .then(res => {
-       return res.data.contents.map(video => {
-        return "/videos/" + video.slug;
-       });
-      });
-     const news = axios
-      .get("https://teamy-unofficial.microcms.io/api/v1/news", {
-       headers: { "X-API-KEY": process.env.API_KEY }
-      })
-      .then(res => {
-       return res.data.contents.map(news => {
-        return "/news/" + news.id;
-       });
-      });
-     return Promise.all([videos, news]).then(values => {
-      return values.join().split(",");
-     });
-    }
-   },
+  // generate: {
+  //   routes() {
+  //    const videos = axios
+  //     .get("https://teamy-unofficial.microcms.io/api/v1/videos", {
+  //      headers: { "X-API-KEY": process.env.API_KEY }
+  //     })
+  //     .then(res => {
+  //      return res.data.contents.map(video => {
+  //       return "/videos/" + video.slug;
+  //      });
+  //     });
+  //    const news = axios
+  //     .get("https://teamy-unofficial.microcms.io/api/v1/news", {
+  //      headers: { "X-API-KEY": process.env.API_KEY }
+  //     })
+  //     .then(res => {
+  //      return res.data.contents.map(news => {
+  //       return "/news/" + news.id;
+  //      });
+  //     });
+  //    return Promise.all([videos, news]).then(values => {
+  //     return values.join().split(",");
+  //    });
+  //   }
+  //  },
   
-   router: {
-    base: '/teamy/'
-  },
+  //  router: {
+  //   base: '/teamy/'
+  // },
 
    
 }
