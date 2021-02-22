@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { API_KEY } = process.env;
-const axios = require("axios"); 
+// const axios = require("axios"); 
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -68,14 +68,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
-  env: { API_KEY },
+  
 
-  privateRuntimeConfig: {
-    apiKey: API_KEY
-  },
-  publicRuntimeConfig: {
-    apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
-  },
+  // privateRuntimeConfig: {
+  //   apiKey: API_KEY
+  // },
+  // publicRuntimeConfig: {
+  //   apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
+  // },
 
   // target: 'static',
   
@@ -134,6 +134,6 @@ export default {
   //  router: {
   //   base: '/teamy/'
   // },
-
+  env: { API_KEY },
    
 }

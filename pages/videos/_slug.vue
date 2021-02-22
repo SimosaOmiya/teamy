@@ -44,11 +44,11 @@
 
 <script>
 export default({
-  async asyncData({params,$config,$axios}){
+  async asyncData({params,$axios}){
     // console.log(`${params.slug}`)
     const url = `https://teamy-unofficial.microcms.io/api/v1/videos/${params.slug}`;
     const video = await $axios.$get(url,{
-      headers:{"X-API-KEY":$config.apiKey}
+      headers:{"X-API-KEY":process.env.apiKey}
     })
     // console.log(video);
     return {video}

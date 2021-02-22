@@ -19,7 +19,7 @@
 <script>
   import ContentCard from "@/components/contentCard.vue"
   export default({
-    async asyncData({$config, $axios}){
+    async asyncData({$axios}){
       const url = "https://teamy-unofficial.microcms.io/api/v1/videos";
       let total = 0;
       const limit = 50;
@@ -28,7 +28,7 @@
       while(1){
         const response = await $axios.$get(url,{
           params:{"limit": limit , "offset": total},
-          headers:{"X-API-KEY":$config.apiKey}
+          headers:{"X-API-KEY":process.env.apiKey}
         })
 
         const res = response.contents;

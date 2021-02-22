@@ -19,10 +19,10 @@
 <script>
 import ContentCard from "@/components/contentCard.vue"
 export default({
-  async asyncData({$config,$axios}){
+  async asyncData({$axios}){
     const url = "https://teamy-unofficial.microcms.io/api/v1/news";
     const res = await $axios.$get(url,{
-      headers:{"X-API-KEY":$config.apiKey}
+      headers:{"X-API-KEY":process.env.apiKey}
     })
     const newsGroups = res.contents
     // console.log(videos);

@@ -88,10 +88,10 @@
   import MenuBtn from "@/components/menubtn.vue";
   export default({
     layout: 'top',
-    async asyncData({$config, $axios}){
+    async asyncData({$axios}){
         const url = "https://teamy-unofficial.microcms.io/api/v1/news";
         const res = await $axios.$get(url,{
-          headers:{"X-API-KEY":$config.apiKey},
+          headers:{"X-API-KEY":process.env.apiKey},
           params:{limit:6}
         })
         const newsGroups = res.contents
