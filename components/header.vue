@@ -6,10 +6,10 @@
         aria-label="Sidebar" 
         bg-variant="secondary"
         width="100%"
-        shadow
-        no-header>
-          <template #default="{ hide }">
-          <p class="menu-btn" @click="hide"><i class="fas fa-times"></i></p>
+        shadow>
+        <!-- no-header> -->
+        <!-- <template #default="{ hide }">
+          <b-btn class="menu-btn" @click="hide"><i class="fas fa-times"></i></b-btn>
           <b-container class="sidebar-inner-container" fluid="lg">
             <ul>
               <li><nuxt-link to="/">Home</nuxt-link></li>
@@ -19,7 +19,16 @@
               <li><nuxt-link to="/knowledge">Knowledge</nuxt-link></li>
             </ul>      
           </b-container>
-        </template> 
+        </template> -->
+        <b-container class="sidebar-inner-container" fluid="lg">
+          <ul>
+            <li><nuxt-link to="/">Home</nuxt-link></li>
+            <li><nuxt-link to="/about">About</nuxt-link></li>
+            <li><nuxt-link to="/news">News</nuxt-link></li>
+            <li><nuxt-link to="/videos">Videos</nuxt-link></li>
+            <li><nuxt-link to="/knowledge">Knowledge</nuxt-link></li>
+          </ul>      
+        </b-container>
       </b-sidebar>
     </nav>
   </header>
@@ -68,17 +77,6 @@ nav{
 }
 .b-sidebar .slide{
   transition: transform $b-sidebar-transition-duration cubic-bezier(.19, 1, .22, 1);
-}
-
-.menu-btn{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-right: 1rem;
-
-  font-size: $h1-font-size;
-  color:white;
-  cursor:pointer;
 }
 
 </style>
