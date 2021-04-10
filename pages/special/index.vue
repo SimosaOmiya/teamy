@@ -6,7 +6,7 @@
       <b-card-group class="row">
         <ContentCard v-for="news in newsGroups" 
           :key="news.id" 
-          :thumbnailSrc="thumbnail" 
+          :thumbnailSrc="news.thumbnailSrc" 
           :title="news.title" 
           :uploadedAt="news.createdAt" 
           :tags="news.tags" 
