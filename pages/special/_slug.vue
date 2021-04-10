@@ -11,6 +11,7 @@
           <h2>{{news.title}}</h2>
           <b-img :src="thumbnail" fluid center></b-img>
           <p v-html="news.sentence"></p>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </section>
       </b-col>
       <b-col md="1"></b-col>
@@ -38,9 +39,7 @@ export default({
     }
   },
   mounted() {
-    if (twttr) {
-      twttr.widgets.load()
-    }
+    window.twttr.widgets.load()
   }
 })
 </script>
