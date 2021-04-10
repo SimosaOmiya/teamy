@@ -27,6 +27,7 @@
             <li><nuxt-link to="/news">News</nuxt-link></li>
             <li><nuxt-link to="/videos">Videos</nuxt-link></li>
             <li><nuxt-link to="/knowledge">Knowledge</nuxt-link></li>
+            <li><nuxt-link to="/special">Special</nuxt-link></li>
           </ul>      
         </b-container>
       </b-sidebar>
