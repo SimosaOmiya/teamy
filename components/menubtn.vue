@@ -1,6 +1,7 @@
 <template>
   <div class="menu-btn" v-b-toggle.sidebar>
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars" style="font-size: 40px"></i><br>
+    Menu
   </div>
 </template>
 
@@ -11,11 +12,13 @@
   position: absolute;
   top: 0;
   right: 0;
+  padding-top: 1rem;
   padding-right: 1rem;
-
-  font-size: $h1-font-size;
-  color:black;
+  text-align: center;
   cursor:pointer;
+
+  font-size: 15px;
+  color:gray;
 }
 
 </style>

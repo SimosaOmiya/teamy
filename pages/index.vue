@@ -7,18 +7,11 @@
   <b-container fluid="lg">
     <section>
       <section>
-        <h2>注意</h2>
-        <p class="text-md-center">当サイトは，声優三姉妹【チームY】の1ファンが運営する<strong>非公式ウェブサイト</strong>です．<br>
-          <strong>関係者各位（声優事務所 響，UUUM（株）など）とは一切関係がございません．</strong><br>
-          当サイトに関する問い合わせなどをなさらないよう，お願いいたします．<br>
-          （ご連絡は制作者 <Nuxt-link to="/author" target="_blank">SimosaOmiya</Nuxt-link> までお願いいたします．）
-        </p>
-      </section>
-      <section>
-        <h2>おわび</h2>
-        <p class="text-md-center">当サイトは現在 暫定公開状態 です．<br>
-          デザインやレイアウトなど不具合が発生する場合がございますのでご了承ください．<br>
-          各動画に関する解説なども順々に追加してまいります．
+        <h2>ご案内</h2>
+        <p style="padding: .5rem 2rem;">
+          本サイトは，チームYの1ファンが運営する<strong>【非公式ウェブサイト】</strong>です．関係者各位（声優事務所 響，UUUM（株）など）とは<strong>【一切関係はございません】</strong>．
+          本サイト関連の問い合わせは，制作者 <Nuxt-link to="/author">SimosaOmiya</Nuxt-link> の Twitter DM へどうぞ．<br>
+          現在<strong>【暫定公開状態】</strong>のため，レイアウト等の不具合が生じておりますことをお詫び申し上げます．
         </p>
       </section>
       <article>
@@ -43,7 +36,6 @@
         <b-row>
           <b-col md="7">
             <h2>最新動画</h2>
-            <p>反映が半日程度遅れる場合があります</p>
             <div>
               <div class="g-ytsubscribe" data-channelid="UCtD8UMFAgAUn7sGGPK5IvAA" data-layout="full" data-count="default"></div>
               <script src="https://apis.google.com/js/platform.js"></script>
@@ -53,6 +45,8 @@
               aspect="16by9"
               src="https://youtube.com/embed/playlist?list=UUtD8UMFAgAUn7sGGPK5IvAA"      
             ></b-embed>
+            <br>
+            <p>※Youtubeの仕様上，反映が半日程度遅れる場合があります</p>   
           </b-col>
           <b-col md="5">
             <h2>公式Twitter</h2>
@@ -121,8 +115,9 @@ h2{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
+  height: calc(100vh - 6rem);
+  width: calc(100% - 6rem);
+  margin: 3rem;
 }
 
 #view-more{

@@ -9,8 +9,9 @@
         <section>
           <p>{{news.createdAt.substr(0,10)}} {{news.createdAt.substr(11,5)}}</p>
           <h2>{{news.title}}</h2>
-          <b-img :src="thumbnail" fluid center></b-img>
+          <b-img :src="news.thumbnailSrc" fluid center></b-img>
           <p v-html="news.sentence"></p>
+          <p id="editor">by SimosaOmiya</p>
         </section>
       </b-col>
       <b-col md="1"></b-col>
@@ -28,18 +29,24 @@ export default({
     return {news}
   },
   computed:{
-    thumbnail(){
-      if (this.news.thumbnailSrc == null | this.news.thumbnailSrc == ""){
-        return require("~/assets/img/info_16by9.png")
-      }
-      else{
-        return this.news.thumbnailSrc
-      }
-    }
+    // thumbnail(){
+    //   if (this.news.thumbnailSrc == null | this.news.thumbnailSrc == ""){
+    //     // return require("~/assets/img/info_16by9.png")
+        
+    //   }
+    //   else{
+    //     return this.news.thumbnailSrc
+    //   }
+    // }
   },
 })
 </script>
 
 <style scoped lang="scss">
-
+  #editor{
+    font-size: .9rem;
+    font-style: italic;
+    color: gray;
+    text-align: right;
+  }
 </style>
