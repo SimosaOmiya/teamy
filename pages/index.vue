@@ -128,6 +128,9 @@ h2{
 @media (max-width: 576px) {
   #top {
     background-image: url('~assets/img/bgSm.png');
+    height: calc(100vh - 1rem);
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
   }
 }
 

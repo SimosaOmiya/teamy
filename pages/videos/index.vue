@@ -12,6 +12,9 @@
           :slug="`videos/${video.id}`"
         ></ContentCard>
       </b-card-group>
+      <div style="text-align:center">
+        <b-button variant="outline-dark" onclick="view-more()">View More</b-button>
+      </div>
     </section>
   </b-container>
 </template>
@@ -21,8 +24,8 @@
   export default({
     async asyncData({$axios}){
       const url = "https://teamy-unofficial.microcms.io/api/v1/videos";
+      const limit = 10;
       let total = 0;
-      const limit = 50;
       let videos = [];
         
       while(1){
@@ -32,8 +35,8 @@
         })
 
         const res = response.contents;
+
         videos = videos.concat(res);
-        // console.log(videos);
 
         if(total < response.totalCount){
           total += limit
@@ -41,11 +44,16 @@
         else{
           break;
         }
-      }
+      } 
       return {videos}
     },
     components:{
       ContentCard
+    },
+    data(){
+      return{
+        videos:videos
+      }
     },
   })
 </script>
