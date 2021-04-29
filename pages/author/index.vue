@@ -6,17 +6,18 @@
         <b-card no-body border-variant="white" class="card">
           <b-row>
             <b-col sm="4">
-              <div id="icon-wrapper" @click="$bvModal.show('modal')">
+              <!-- <div id="icon-wrapper" @click="$bvModal.show('modal')"> -->
+              <div id="icon-wrapper">
                 <b-card-img src="~/assets/img/simosa_image.jpg" class="rounded-circle"></b-card-img>
               </div>
-              <b-modal id="modal" hide-footer centered>
+              <!-- <b-modal id="modal" hide-footer centered>
                 <template #modal-title>どうも<code>SimosaOmiya</code>です</template>
                 <div class="d-block text-center">
                   <p class="h3">流石に私の写真は無いです</p>
                   <p>という謎のモーダルを実装</p>
                 </div>
                 <b-button class="mt-3" block @click="$bvModal.hide('modal')">Close</b-button>
-              </b-modal>
+              </b-modal> -->
             </b-col>
             <b-col sm="8">
               <b-card-body title="​SimosaOmiya / しもおさ">
@@ -32,21 +33,21 @@
                   </p>
                 </b-card-text>
                 <b-button href="https://twitter.com/SimosaOmiya" variant="twitter" target="_blank" block><i class="fab fa-twitter"></i> Twitter</b-button>
-                <b-button href="https://www.notion.so/SimosaOmiya-05c1b2d2722a407790b89f24a3626d56" variant="instagram" target="_blank" block><i class="fas fa-home"></i> Website(仮)</b-button>
+                <b-button href="https://simosaomiya.github.io/profile" variant="instagram" target="_blank" block><i class="fas fa-home"></i> Website(仮)</b-button>
                 <b-button href="https://note.com/simosaomiya" variant="line" target="_blank" block><i class="fab fa-blogger"></i> Blog(note)</b-button>
               </b-card-body>
             </b-col>
           </b-row>
         </b-card>
       </section>
-      <section id="knowledge">
+      <!-- <section id="knowledge">
         <h2>"Knowledge"ページへの情報提供</h2>
         <p>受け入れ用フォームを準備中です．</p>
-      </section>
+      </section> -->
       <section>
         <h2>サイトに関するお問い合わせ</h2>
         <p>
-          運営者Twitter(@simosaomiya)のDMまでお願いいたします．<br>
+          運営者Twitter(@simosaomiya)のDMまでお願いいたします．<br>ただし，本業等の都合により，返信に時間を要す可能性があります．
           （DMは全ユーザに開放されているはずですが，定期的に諸事情によりアカウント自体が鍵垢になっている可能性があります．）
         </p>
         <a href="https://twitter.com/messages/compose?recipient_id=1237354124292714496&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-size="large" data-lang="ja" data-screen-name="@simosaomiya" data-show-count="false">Message @@simosaomiya</a>
