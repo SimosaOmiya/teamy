@@ -125,12 +125,16 @@ h2{
   margin:auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #top {
-    background-image: url('~assets/img/bgSm.png');
     height: calc(100vh - 1rem);
     width: calc(100% - 1rem);
     margin: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  #top {
+    background-image: url('~assets/img/bgSm.png');
   }
 }
 
